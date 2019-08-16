@@ -29,7 +29,7 @@ import six
 
 class TimeStep(
     collections.namedtuple('TimeStep',
-                           ['step_type', 'reward', 'discount', 'observation'])):
+                           ['step_type', 'reward', 'discount', 'observation', 'info'])):
   """Returned with every call to `step` and `reset` on an environment.
 
   A `TimeStep` contains the data emitted by an environment at each step of
@@ -50,6 +50,8 @@ class TimeStep(
     observation: A NumPy array, or a nested dict, list or tuple of arrays.
       Scalar values that can be cast to NumPy arrays (e.g. Python floats) are
       also valid in place of a scalar array.
+    info: A dictionary containing other arbitrary information that you wish
+    
   """
   __slots__ = ()
 
